@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: courier, sans serif;
+  background-color: antiquewhite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#logo {
+  background-color: #dc143c;
+  width: 2.5em;
+  height: 2em;
+  color: #fff;
+  text-align: center;
+  font-size:3em;
+  padding-top: 0.6em;
+  margin-left: 0.5em;
+  box-shadow: 1px 4px 1px brown;
+  border-radius: 0.1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.text {
+  margin-left: 2em;
+  font-size: 15px;
+  font-weight: 600;
+  color: #dc143c;
+  padding-top: 2em;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 3em;
+}
+
+.cases {
+  width: 14em;
+  box-shadow: 1px 2px #f19090;
+  border: 0.1px solid #f5bbbb;
+  padding-bottom: 2em;
+  padding-left: 0.5em;
+  font-display: block;
+  font-size: 1.3em;
+
+}
+
+.cases span {
+  font-weight: 700;
+}
+
+.cases .fa-caret-up {
+  color: red;
+}
+
+.cases .fa-caret-down {
+  color: green;
+}
+
+.lead {
+  text-align: center;
+  color: aqua;
+}
+
+@keyframes divjay {
+  0%{
+      transform: rotate(0deg);
+      
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+      transform: rotate(360deg);
+
   }
+}
+
+@media screen and (max-width: 600px) {
+  body{
+      background-color: white;
+  }
+  .header {
+      margin-right: 100px;
+      margin-left: 10px;
+  }
+  .text {
+      font-size: 30px;
+      padding-top: 2.5em;
+  }
+
+  .dashboard {
+      display:flex;
+      flex-direction: column;
+      margin-left: 30px;
+  }
+
+  .cases {
+      margin-bottom: 30px;
+      margin-left: 0.1em;
+      width: 17em;
+      text-align: center;
+      font-size: 25px;
+      font-weight: 900;
+  }  
 }
